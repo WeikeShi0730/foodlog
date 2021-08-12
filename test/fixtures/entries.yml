@@ -3,13 +3,13 @@
 one:
   meal_type: MyString
   calories: 1
-  protiens: 1
+  proteins: 1
   carbs: 1
   fats: 1
 
 two:
   meal_type: MyString
   calories: 1
-  protiens: 1
+  proteins: 1
   carbs: 1
   fats: 1

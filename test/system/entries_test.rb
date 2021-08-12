@@ -18,7 +18,7 @@ class EntriesTest < ApplicationSystemTestCase
     fill_in "Carbs", with: @entry.carbs
     fill_in "Fats", with: @entry.fats
     fill_in "Meal type", with: @entry.meal_type
-    fill_in "Protiens", with: @entry.protiens
+    fill_in "proteins", with: @entry.proteins
     click_on "Create Entry"
 
     assert_text "Entry was successfully created"
@@ -33,7 +33,7 @@ class EntriesTest < ApplicationSystemTestCase
     fill_in "Carbs", with: @entry.carbs
     fill_in "Fats", with: @entry.fats
     fill_in "Meal type", with: @entry.meal_type
-    fill_in "Protiens", with: @entry.protiens
+    fill_in "proteins", with: @entry.proteins
     click_on "Update Entry"
 
     assert_text "Entry was successfully updated"
