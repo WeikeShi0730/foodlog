@@ -7,7 +7,7 @@
       <div class="message-body">
         <ul>
           <% entry.errors.each do |error| %>
-            <li><%= error.full_message %></li>
+            <li><%= error.full_message.downcase %></li>
           <% end %>
         </ul>
       </div>
