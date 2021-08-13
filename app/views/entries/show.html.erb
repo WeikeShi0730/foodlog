@@ -9,25 +9,25 @@
   <div class="column is-one-third">
     <nav class="panel is-link">
       <p class="panel-heading">
-        <%= @entry.meal_type %>
+        <%= @entry.meal_type.downcase %>
       </p>
       <div class="panel-block">
         calories: <%= @entry.calories %>
       </div>
       <div class="panel-block">
-        proteins: <%= @entry.proteins %>
+        proteins: <%= @entry.proteins %> g
       </div>
       <div class="panel-block">
-        carbs: <%= @entry.carbs %>
+        carbs: <%= @entry.carbs %> g
       </div>
       <div class="panel-block">
-        fats: <%= @entry.fats %>
+        fats: <%= @entry.fats %> g
       </div>
     </nav>
     <div class="columns is-mobile">
       <div class="column">
-        <%= link_to "Edit", edit_entry_path(@entry), class: "button is-gray" %>
-        <%= link_to "Delete", entry_path(@entry), method: :delete, data: { confirm: "Are you sure?" }, class: "button is-gray" %>
+        <%= link_to "edit", edit_entry_path(@entry), class: "button is-gray" %>
+        <%= link_to "delete", entry_path(@entry), method: :delete, data: { confirm: "are you sure?" }, class: "button is-gray" %>
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
         <!-- @entry from entries controller - before_action - show - set_entry -->
       </div>
