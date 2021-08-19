@@ -1,5 +1,5 @@
 <% content_for :title do %>
-  <%= @entry.meal_type %> &ndash; <%= DateTime.now.to_s(:nice_date) %>
+  <%= @entry.meal_type.downcase %> &ndash; <%= DateTime.now.to_s(:nice_date).downcase %>
 <% end %>
 
 <!-- <%= params %> -->
@@ -9,7 +9,7 @@
   <div class="column is-one-third">
     <nav class="panel is-link">
       <p class="panel-heading">
-        <%= @entry.meal_type.downcase %>
+        <%= @entry.meal_type.downcase %> | <%= @entry.category.title if @entry.category.presence %>
       </p>
       <div class="panel-block">
         calories: <%= @entry.calories %>
