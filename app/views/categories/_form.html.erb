@@ -1,22 +1,23 @@
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
-
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+    <div class="message is-danger">
+      <div class="message-header">
+        <p><%= pluralize(entry.errors.count, "error") %> prohibited this entry from being saved:</p>
+      </div>
+      <div class="message-body">
+        <ul>
+          <% entry.errors.each do |error| %>
+            <li><%= error.full_message.downcase %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
-
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: "label is-lowercase" %>
+    <%= form.text_field :title, class: "input is-lowercase" %>
   </div>
-
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "button is-success is-lowercase" %>
   </div>
 <% end %>
